@@ -1,0 +1,39 @@
+@mixin banners-fixo ($cor, $url-image){
+    background-color: $cor;
+    background-image: url($url-image);
+}
+
+.banners-fixos{
+
+    margin-top: 30px;
+
+    .banner-12x-fixo{
+        @include banners-fixo($rosa, '../images/parcele-em-12x.jpg')
+    }
+    .banner-entrega-fixo{
+        @include banners-fixo($roxo, '../images/entrega-para-todo-brasil.jpg')
+    }
+
+    .banner-12x-fixo, .banner-entrega-fixo{
+        background-size: cover;
+        color: $branco;
+        height: 105px;
+        padding: 20px 60px;
+
+        svg, p{
+            margin: 0;
+            padding: 0;
+
+        }
+        p{
+            font-weight: 100;
+            font-size: 23px;
+            line-height: 110%;
+            margin-left: 20px;
+            strong{
+                font-weight: bold;
+            }
+        }
+
+    }
+}
